@@ -113,4 +113,12 @@ This project was originally generated using Lovable and is independently maintai
 
 MIT
 
+---
 
+## 📥 Download
+
+Puteți descărca ultima versiune a aplicației gata de instalare:
+
+[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/tzongocu/nostr-authenticator/releases/download/v1.0.0/nostr-authenticator-v1.0.0.apk)
+
+> **Notă:** După descărcare, va trebui să permiteți instalarea din "Surse Necunoscute" în setările telefonului Android pentru a putea instala fișierul APK.
