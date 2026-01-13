@@ -1,73 +1,57 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Nostr Authenticator
+Nostr Authenticator is a mobile application that enables user authentication using Nostr direct messages and proof of key ownership.
+The application is designed to act as a companion authenticator for websites that rely on Nostr identities instead of traditional usernames and passwords.
+1. Overview
+Nostr Authenticator allows users to prove control over a Nostr identity by responding to authentication challenges sent via Nostr direct messages.
+The authentication flow does not rely on passwords, centralized servers, or third-party identity providers.
+2. How It Works
+1.	A protected website controls a trusted Nostr account (the source account).
+2.	When authentication is required, the website sends a unique challenge message via a Nostr direct message (DM) to the user.
+3.	Nostr Authenticator listens for incoming DMs from the configured source account.
+4.	When a challenge is received, the app replies via Nostr DM, sending back the exact received message using one of the user’s stored keys.
+5.	By receiving the correct response from the expected public key, the website can verify that the user controls the corresponding private key and authorize access.
+No separate cryptographic signing step is performed. The proof of identity is the ability to send the correct reply from the declared Nostr public key.
+3. Authentication Model
+Authentication is based on message control, not password exchange.
+Identity is verified by control of the Nostr private key and successful DM delivery from the expected public key.
+The website validates the response by matching the challenge message and the sender’s public key.
+4. Key Storage
+•	Private keys are stored locally on the device.
+•	Keys can be stored in plain form or encrypted inside a local vault.
+•	No backend or centralized key storage is required.
+•	No private key material is transmitted over the network.
+5. Features
+•	Nostr-based authentication via direct messages.
+•	Challenge–response authentication flow.
+•	Proof of key ownership without passwords.
+•	Support for multiple stored keys.
+•	Optional encrypted vault for private keys.
+•	Local-only key handling.
+•	Designed for mobile use (Android).
+6. Tech Stack
+•	React
+•	TypeScript
+•	Vite
+•	Capacitor (Android)
+•	Nostr protocol
+7. Development
+Install dependencies:
+npm install
+Run the application locally:
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+8. Build Android APK
+npm run build
+npx cap sync android
+npx cap open android
+9. Security Notes
+•	The application does not transmit private keys to any external server.
+•	All key material remains on the local device.
+•	Authentication relies on correct source account configuration, secure local key storage, and device integrity.
+•	This project is provided as-is.
+•	Review and audit are recommended before use in high-security environments.
+10. Maintainer
+Nostr Authenticator is developed and maintained by botrift.com.
+11. Origin
+This project was originally generated using Lovable and is independently maintained.
+12. License
+MIT
