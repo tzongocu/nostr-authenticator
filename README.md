@@ -117,8 +117,8 @@ MIT
 
 ## 📥 Download
 
-Puteți descărca ultima versiune a aplicației gata de instalare:
+You can download the latest version of the application ready to install:
 
 [![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/tzongocu/nostr-authenticator/releases/download/v1.0.0/nostr-authenticator-v1.0.0.apk)
 
-> **Notă:** După descărcare, va trebui să permiteți instalarea din "Surse Necunoscute" în setările telefonului Android pentru a putea instala fișierul APK.
+> **Note:** After downloading, you will need to allow installation from "Unknown Sources" in your Android phone's settings to be able to install the APK file.
