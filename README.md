@@ -119,6 +119,6 @@ MIT
 
 You can download the latest version of the application ready to install:
 
-[![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/tzongocu/nostr-authenticator/releases/download/v1.0.0/nostr-authenticator-v1.0.0.apk)
+[![Download Web Build](https://img.shields.io/badge/Download-Web%20Build-blue?style=for-the-badge&logo=googlechrome)](https://github.com/tzongocu/nostr-authenticator/releases/download/v2.5.0/cyber-vault-key-manager-v2.5.0-dist.zip)
 
 > **Note:** After downloading, you will need to allow installation from "Unknown Sources" in your Android phone's settings to be able to install the APK file.
